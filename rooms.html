@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Suites | LuxeStays</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero { height: 40vh; background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1542314831-c6a4d1409e1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
+        .rooms-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-top: 2rem; }
+        .room-row { display: flex; background: var(--bg-secondary); border-radius: 8px; overflow: hidden; border: 1px solid var(--border); transition: var(--transition); }
+        .room-row:hover { border-color: var(--accent); transform: scale(1.02); }
+        .room-img { flex: 1; background-size: cover; background-position: center; min-height: 300px; }
+        .room-info { flex: 1; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+        .room-features { margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+        .feature { background: var(--bg-primary); padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.85rem; border: 1px solid var(--border); }
+        @media (max-width: 900px) {
+            .room-row { flex-direction: column; }
+            .room-img { min-height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">LuxeStays</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html" style="color: var(--accent);">Rooms</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-auth">
+            <a href="login.html" class="btn btn-outline">Log In</a>
+        </div>
+        <div class="mobile-menu-btn">☰</div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Our Rooms</h1>
+            <p>Find your perfect sanctuary.</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="rooms-grid">
+            <!-- Room 1 -->
+            <div class="room-row fade-in">
+                <div class="room-img" style="background-image: url('https://images.unsplash.com/photo-1590490359683-658d3d23f972?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="room-info">
+                    <h2>Deluxe Ocean View</h2>
+                    <div class="card-price" style="font-size: 2rem;">$250 / night</div>
+                    <p>Wake up to the sound of waves. A spacious room with premium amenities and an exclusive balcony.</p>
+                    <div class="room-features">
+                        <span class="feature">King Bed</span>
+                        <span class="feature">Ocean View</span>
+                        <span class="feature">Balcony</span>
+                        <span class="feature">Free Wi-Fi</span>
+                    </div>
+                    <button class="btn" onclick="alert('Proceeding to checkout for Deluxe Room!')">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="room-row fade-in">
+                <div class="room-img" style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="room-info">
+                    <h2>Executive Suite</h2>
+                    <div class="card-price" style="font-size: 2rem;">$450 / night</div>
+                    <p>Ultimate luxury and space. Features a separate living area, king bed, and panoramic city views.</p>
+                    <div class="room-features">
+                        <span class="feature">1 Bedroom</span>
+                        <span class="feature">Living Area</span>
+                        <span class="feature">Mini Bar</span>
+                        <span class="feature">Bathtub</span>
+                    </div>
+                    <button class="btn" onclick="alert('Proceeding to checkout for Executive Suite!')">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="room-row fade-in">
+                <div class="room-img" style="background-image: url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="room-info">
+                    <h2>Cozy Standard</h2>
+                    <div class="card-price" style="font-size: 2rem;">$120 / night</div>
+                    <p>Perfect for solo travelers or couples. Modern comfort, smart TV, and premium bedding.</p>
+                    <div class="room-features">
+                        <span class="feature">Queen Bed</span>
+                        <span class="feature">Smart TV</span>
+                        <span class="feature">Desk</span>
+                    </div>
+                    <button class="btn" onclick="alert('Proceeding to checkout for Standard Room!')">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 LuxeStays Resorts. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
